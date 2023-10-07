@@ -9,6 +9,9 @@ jobs:
   static-checks:
     name: Format (clang-format, black format, file format)
     runs-on: ubuntu-20.04
+    defaults:
+      run:
+        working-directory: ./godot-cpp
     steps:
       - name: Checkout
         uses: actions/checkout@v4
