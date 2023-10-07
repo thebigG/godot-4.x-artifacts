@@ -149,7 +149,7 @@ jobs:
           search_artifacts: true
           check_artifacts: true
           ensure_latest: true
-          path: godot-artifacts
+          path: ./godot-cpp/godot-artifacts
 
       - name: Run tests
         if: ${{ matrix.run-tests }}
