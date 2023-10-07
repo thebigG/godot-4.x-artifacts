@@ -13,6 +13,9 @@ jobs:
   build:
     name: ${{ matrix.name }}
     runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: ./godot-cpp
     strategy:
       fail-fast: false
       matrix:
