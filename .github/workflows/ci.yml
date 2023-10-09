@@ -125,6 +125,9 @@ jobs:
       - name: Build godot-cpp (debug)
         run: |
           scons platform=${{ matrix.platform }} target=template_debug ${{ matrix.flags }}
+      - name: Build godot-cpp static lib
+        run: |
+          scons platform=${{ matrix.platform }} -j8 custom_api_file=./gdextension/extension_api.json
 
       - name: Build test without rebuilding godot-cpp (debug)
         run: |
